@@ -67,22 +67,22 @@ choicesEl.appendChild(choiceNode);
 function questionClick() {
 
 //If user put wrong answer,
-if (this.value !== questions[currentQuestion].answer) {
+    if (this.value !== questions[currentQuestion].answer) {
 //Time reduction
 time -=15;
 
-if (time < 0) {
+    if (time < 0) {
     time = 0;
-}
+    }
 
 //show updated time
 timerEl.textContent = time;
 
 feedbackEl.textContent = "INCORRECT :(";
 
-} else {
+    } else {
     feedbackEl.textConteent = "YES! :)"
-}
+    }
 
 //Display feedback
 feedbackEl.setAttribute("class", "feedback");
@@ -92,12 +92,29 @@ setTimeout(function() {
 
 //next q and more
 currentQuestion++;
-if (currentQuestion === questions.length) {
+    if (currentQuestion === questions.length) {
     quizEnd();
-} else {
-    getQuestion();
+        } else {
+    getQuestion();  
+    }      
 }
 
+//stop the timer
+function quizEnd() {
+    clearInterval(timerId);
+
+//end screen display
+    var endScreenEl = document.getElementById("end-screen");
+    endScreenEl.removeAttribute("class");
+
+//display final result
+    var finalScoreEl = document.getElementById("final-score");
+    finalScoreEl.textContent = time;
+
+//hide questions again
+    questionsEl.setAttribute("class", "hide");
 }
+
+//This is the clockTick
 
 }
