@@ -30,7 +30,7 @@ function startQuiz() {
     timerId = setInterval(clockTick, 1000);
 
 //display starting time
-    timerEl.textcontent = time;
+    timerEl.textContent = time;
 
     getQuestion();
 }
@@ -42,7 +42,7 @@ function getQuestion() {
 
 //Refreshing to appropriate question title
     var titleEl = document.getElementById("question-title");
-    titleEl.textContentt = currentQuestion.title;
+    titleEl.textContent = currentQuestion.title;
 
 //Clearing last answers
     choicesEl.innerHTML ="";
@@ -120,7 +120,7 @@ function quizEnd() {
 //This is the clockTick function for the timer
     function clockTick() {
         time--;
-        timerEL,textcontent = time;
+        timerEL.textContent = time;
     if (time <=0) {
         quizEnd();
     }
@@ -145,9 +145,9 @@ function saveHighscore() {
 
 //commit latest score to local storage
         highscores.push(latestScore);
-        window.localStorage.setItem("highscores", JSON,stringify(highscores));
+        window.localStorage.setItem("highscores", JSON.stringify(highscores));
 
-// Jumpp to Top Coders Page
+// Jump to Top Coders Page
         window.localStorage,href = "highscores.html";
     }
 }
