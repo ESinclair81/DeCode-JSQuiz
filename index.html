@@ -15,10 +15,40 @@
 
     <div class="wrapper">
         <div id="start-screen" class="start">
+
             <h1>Can YOU DeCode This Quiz???</h1>
             <p>You have 60 seconds to answer 10 multiple choice questions on Javascript. 
                 Get your answer correct, or 10 seconds will be deducted from your time.
-                The game will end when you have successfully DeCode-d all 10 questions 
-                or when the clock strikes 0.</p>
+                The game will end when you have successfully DeCode-ed all 10 questions 
+                OR worse...when the clock strikes 0!!!
+            </p>
+            
+                <button id="start">Start the Quiz</button>
+            <div>
+
+            <div id="questions" class="hide">
+                <h2 id= "question-title"></h2>
+                <div id="choices" class="choices"></div>
+            </div>
+
+            <div id="game-over" class="hide"></div>
+            <h2> COMPLETE</h2>
+            <p>Congratulations! You Scored <span id="final-score"></span>!!!</p>
+            <p>
+                Please Enter Your Initials Here: <input type="text" id="initials" max="3" />
+                <button id="save">SAVE</button>
+            </p>
+            </div>
+
+            <div id ="feedback" class="feedback hide"></div>
+            </div>
+
+            <script src="Assets/JS/logic.js"></script>          
+            <script src="Assets/JS/questions.js"></script>
+
+            <footer>
+                Brought to you by The Soul Proprietor Inc.
+            </footer>
+
 </body>
 </html>
