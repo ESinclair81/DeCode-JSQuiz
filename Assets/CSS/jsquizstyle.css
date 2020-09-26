@@ -1,1 +1,76 @@
-/*This is the style sheet for the DeCode Quix
+/*This is the style sheet for the DeCode Quiz*/
+
+/* Tell browser to fit box sizing calculations */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Set background colour and remove browser margins */
+body {
+    margin: 5px;
+    padding: 10px;
+    background-color: lightblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+        font-size: 40pt;
+        font-weight: bold;
+        text-align: center;
+        color: magenta;
+
+}
+
+h2 {
+    font-size: 29pt;
+    font-weight: italic;
+    text-align: center;
+    color: magenta;
+}
+
+a {
+    font-size: 14pt;
+    text-align: right;
+    color: magenta;
+    
+}
+
+button {
+
+    font-size: 24pt;
+    font-weight: italic;
+    text-align: center;
+    color: yellow;
+    background-color: magenta;
+    align-items: center;
+    
+}
+
+p {
+    font-size: 18pt;
+    text-align: center;
+    padding: 5px;
+    
+}
+
+.hide {
+    opacity: 0;
+    
+}
+
+game-over {
+    font-size: 16pt;
+    text-align: right;
+    color: magenta;
+}
+
+footer {
+    text-align: center;
+    font-size: 16px;
+    color: yellow;
+}

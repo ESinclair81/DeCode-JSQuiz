@@ -106,7 +106,7 @@ function quizEnd() {
     clearInterval(timerId);
 
 //end screen display
-    var endScreenEl = document.getElementById("end-screen");
+    var endScreenEl = document.getElementById("game-over");
     endScreenEl.removeAttribute("class");
 
 //display final result
