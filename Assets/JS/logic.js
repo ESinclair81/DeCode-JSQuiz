@@ -115,6 +115,7 @@ function quizEnd() {
     questionsEl.setAttribute("class", "hide");
 }
 
+<<<<<<< HEAD
 //This is the clockTick function for the timer
     function clockTick() {
         time--;
@@ -127,5 +128,8 @@ function quizEnd() {
 
 }
 
+=======
+//This is the clockTick
+>>>>>>> feature/questions
 
 }
