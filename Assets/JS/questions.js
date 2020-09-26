@@ -38,7 +38,7 @@ var questions = [
 },
 
 {
-    title: "Which of these symbols should be used to create a code block?"
+    title: "Which of these symbols should be used to create a code block?",
     choices: [" {}", "[]", "()", "]};" ],
     answer: "{}"
 },
