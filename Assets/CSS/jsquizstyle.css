@@ -58,11 +58,51 @@ p {
     
 }
 
-.hide {
-    opacity: 0;
-    
+.wrapper {
+    margin: auto;
 }
 
+.hide {
+    display: none;
+
+}
+
+.scores {
+    font-size:17pt;
+    color:magenta;
+    background-color: yellow;
+    text-align: right;
+
+}
+
+.timer {
+    font-size:22pt;
+    color:white;
+    background-color: magenta;
+    text-align: center;
+
+}
+
+.start {
+    text-align: center;
+    margin: auto;
+
+
+}
+
+.questions {
+    font-size: 18pt;
+    color: black;
+    text-align: center;
+    background-color: magenta;
+
+}
+
+input {
+    border: 2px;
+    border-color: magenta;
+
+}
 game-over {
     font-size: 16pt;
     text-align: right;

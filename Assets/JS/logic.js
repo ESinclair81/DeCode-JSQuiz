@@ -1,7 +1,7 @@
 //Quiz Variables
 
-var currentQuestion = 0;
-var time = questions.length * 10;
+var currentQuestionIndex = 0;
+var time = questions.length * 15;
 var timerId;
 
 //Dom Element Variables 
@@ -32,13 +32,13 @@ function startQuiz() {
 //display starting time
     timerEl.textContent = time;
 
-    getQuestion();
+    getQuestions();
 }
 
-function getQuestion() {
+function getQuestions() {
 
 //Grabbing the current question from the list
-    var currentQuestion = questions[currentQuestion];
+    var currentQuestion = questions[currentQuestionIndex];
 
 //Refreshing to appropriate question title
     var titleEl = document.getElementById("question-title");
@@ -51,10 +51,10 @@ function getQuestion() {
 currentQuestion.choices.foreach(function(choice, i) {
 
     var choiceNode = document.createElement("button");
-    choiceNode.setAttribute("class, choice");
+    choiceNode.setAttribute("class", choice);
     choiceNode.setAttribute("value", choice);
 
-choiceNode.textContent = i + 1 + ". "+choice;
+choiceNode.textContent = i + 1 + ". " + choice;
 
 //Add event listener click per Choice
 choiceNode.onclick = questionClick;
@@ -69,7 +69,7 @@ choicesEl.appendChild(choiceNode);
 function questionClick() {
 
 //If user put wrong answer,
-    if (this.value !== questions[currentQuestion].answer) {
+    if (this.value !== questions[currentQuestions].answer) {
 //Time reduction
 time -=15;
 
@@ -94,10 +94,10 @@ setTimeout(function() {
 
 //next q and more
 currentQuestion++;
-    if (currentQuestion === questions.length) {
+    if (currentQuestions === questions.length) {
     quizEnd();
         } else {
-    getQuestion();  
+    getQuestions();  
     }      
 }
 
@@ -148,7 +148,7 @@ function saveHighscore() {
         window.localStorage.setItem("highscores", JSON.stringify(highscores));
 
 // Jump to Top Coders Page
-        window.localStorage,href = "highscores.html";
+        window.location.href = "highscores.html";
     }
 }
         function checkForEnter(event) {
@@ -156,6 +156,7 @@ function saveHighscore() {
             saveHighscore();
         }
     }
+
 //user clicks section
 
 //click button for intiial to be saved
