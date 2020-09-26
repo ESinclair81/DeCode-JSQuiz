@@ -61,7 +61,9 @@ choiceNode.onclick = questionClick;
 
 //Show on page
 choicesEl.appendChild(choiceNode);
-}};
+});
+
+}
 
 //These are the responses to answers
 function questionClick() {
@@ -115,10 +117,6 @@ function quizEnd() {
     questionsEl.setAttribute("class", "hide");
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> feature/highscores
 //This is the clockTick function for the timer
     function clockTick() {
         time--;
@@ -128,16 +126,6 @@ function quizEnd() {
     }
 }
 
-<<<<<<< HEAD
-
-}
-
-=======
-//This is the clockTick
->>>>>>> feature/questions
-
-}
-=======
 //This is the Top Coders high score function
 
 function saveHighscore() {
@@ -181,6 +169,3 @@ function saveHighscore() {
 
 
 
-
-
->>>>>>> feature/highscores
