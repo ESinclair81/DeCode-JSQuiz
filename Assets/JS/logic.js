@@ -116,6 +116,9 @@ function quizEnd() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/highscores
 //This is the clockTick function for the timer
     function clockTick() {
         time--;
@@ -125,6 +128,7 @@ function quizEnd() {
     }
 }
 
+<<<<<<< HEAD
 
 }
 
@@ -133,3 +137,50 @@ function quizEnd() {
 >>>>>>> feature/questions
 
 }
+=======
+//This is the Top Coders high score function
+
+function saveHighscore() {
+    var initials = initialsEl.value.trim();
+
+    if (initials !=="") {
+
+//Retrieve saved high scores
+        var highscores = 
+        JSON.parse(window.localStorage.getItem("highscores")) || [];
+
+//latest score display in latest score onject to save
+        var latestScore  = {
+            score: time,
+            initials: initials
+        };
+
+//commit latest score to local storage
+        highscores.push(latestScore);
+        window.localStorage.setItem("highscores", JSON,stringify(highscores));
+
+// Jumpp to Top Coders Page
+        window.localStorage,href = "highscores.html";
+    }
+}
+        function checkForEnter(event) {
+        if (event.key === "Enter") {
+            saveHighscore();
+        }
+    }
+//user clicks section
+
+//click button for intiial to be saved
+    saveButton.onclick = saveHighscore;
+
+//click button to start quiz
+    startButton.onclick = startQuiz;
+
+//click button for initials to be entered
+    initialsEl.onkeyup = checkForEnter;
+
+
+
+
+
+>>>>>>> feature/highscores
