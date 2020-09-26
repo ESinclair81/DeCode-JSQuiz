@@ -2,39 +2,39 @@
 
 var questions = [
 {
-    title:
-    choices: [ ]
-    answer:
+    title: "What does PERSISTENCE refer to in Javascript terms?",
+    choices: ["A file path that cannot fail", "The act of performing a PERSE","A user value that stays saved throughout a webpage", "When a coder codes for over 24 hours straight" ],
+    answer: "A user value that stays saved throughout a webpage"
 },
 
 {
-    title:
-    choices: [ ]
-    answer:
+    title: "Which one of these HTML Drag and Drop API events signifies the drag event is over?",
+    choices: ["dragdone","dragend","draggone","drag-end"],
+    answer: "dragend"
 },
 
 {
-    title:
-    choices: [ ]
-    answer:
+    title: "What does the abbreviation JSON stand for?",
+    choices: ["Java Script Object Name","JavaScript Only Notes", "Java Script Object Node", "JavaScript Object Notation"],
+    answer: "JavaScript Object Notation"
 },
 
 {
-    title:
-    choices: [ ]
-    answer:
+    title: "Another way of describing a callback is:_____?",
+    choices: ["passing a function through an event", "a prompt box that takes data a site refers to later", "passing a function through another function", "a function that makes mobile phones ring" ],
+    answer: "passing a function through another function"
 },
 
 {
-    title:
-    choices: [ ]
-    answer:
+    title: "What suffix should be used for a DOM element?",
+    choices: [" .El", " .el", " .domEl", " .DOM" ],
+    answer: " .El"
 },
 
 {
-    title:
-    choices: [ ]
-    answer:
+    title: "which of the below is an example of a variable declaration?",
+    choices: [" var.thingy"," 8 > 0i", " x is y", "var x = y" ],
+    answer: "var x = y"
 },
 
 {
