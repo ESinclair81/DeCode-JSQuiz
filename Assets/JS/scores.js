@@ -15,17 +15,15 @@ function printHighscores() {
         var olEl = document.getElementById("highscores");
             olEl.appendChild(liResult);
     });
+}
 
 //Reset scores
     function clearHighscores() {
         window.localStorage.removeItem("highscores");
         window.location.reload();
+    }
 
     document.getElementById("clear").onclick = clearHighscores;
 
 //Show high scores on load
         printHighscores();
-    }
-        
-    });
-}
