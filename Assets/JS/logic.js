@@ -47,5 +47,57 @@ function getQuestion() {
 //Clearing last answers
     choicesEl.innerHTML ="";
 
-    
+//Choices in loop
+currentQuestion.choices.foreach(function(choice, i) {
+
+    var choiceNode = document.createElement("button");
+    choiceNode.setAttribute("class, choice");
+    choiceNode.setAttribute("value", choice);
+
+choiceNode.textContent = i + 1 + ". "+choice;
+
+//Add event listener click per Choice
+choiceNode.onclick = questionClick;
+
+//Show on page
+choicesEl.appendChild(choiceNode);
+}};
+
+//These are the responses to answers
+function questionClick() {
+
+//If user put wrong answer,
+if (this.value !== questions[currentQuestion].answer) {
+//Time reduction
+time -=15;
+
+if (time < 0) {
+    time = 0;
+}
+
+//show updated time
+timerEl.textContent = time;
+
+feedbackEl.textContent = "INCORRECT :(";
+
+} else {
+    feedbackEl.textConteent = "YES! :)"
+}
+
+//Display feedback
+feedbackEl.setAttribute("class", "feedback");
+setTimeout(function() {
+    feedbackEl.setAttribute("class", "hide");
+}, 1000);
+
+//next q and more
+currentQuestion++;
+if (currentQuestion === questions.length) {
+    quizEnd();
+} else {
+    getQuestion();
+}
+
+}
+
 }
