@@ -2,7 +2,7 @@
 
 var questions = [
 {
-    title: "What does PERSISTENCE refer to in Javascript terms?",
+    title: "What does PERSISTENCE refer to in JavaScript terms?",
     choices: ["A file path that cannot fail", "The act of performing a PERSE","A user value that stays saved throughout a webpage", "When a coder codes for over 24 hours straight" ],
     answer: "A user value that stays saved throughout a webpage"
 },
@@ -38,26 +38,26 @@ var questions = [
 },
 
 {
-    title:
-    choices: [ ]
-    answer:
+    title: "Which of these symbols should be used to create a code block?"
+    choices: [" {}", "[]", "()", "]};" ],
+    answer: "{}"
 },
 
 {
-    title:
-    choices: [ ]
-    answer:
+    title: "i++ is an example of  _________?",
+    choices: ["a variable that adds things twice", "increment expression","increment object", "variable expression" ],
+    answer: "increment expression"
 },
 
 {
-    title:
-    choices: [ ]
-    answer:
+    title: "Which of the following do not refer to types of JavaScript data?",
+    choices: ["boolean, symbolic, number", "number, boolean, grid", "string, object, function", "number, boolean, string" ],
+    answer: "number, boolean, string"
 },
 
 {
-    title:
-    choices: [ ]
-    answer:
+    title: "What other language uses a similar comment syntax style to that used in JavaScript?",
+    choices: ["HTML","CSS","Pascal", "all of the above"],
+    answer: "CSS"
 }
 ];
