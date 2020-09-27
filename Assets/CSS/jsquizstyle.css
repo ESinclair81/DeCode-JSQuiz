@@ -103,7 +103,7 @@ input {
     border-color: magenta;
 
 }
-game-over {
+.game-over {
     font-size: 16pt;
     text-align: right;
     color: magenta;

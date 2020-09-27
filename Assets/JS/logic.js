@@ -1,10 +1,10 @@
-//Quiz Variables
+// Quiz Variables
 
 var currentQuestionIndex = 0;
 var time = questions.length * 15;
 var timerId;
 
-//Dom Element Variables 
+// Dom Element Variables 
 
 var timerEL = document.getElementById("time");
 var questionsEl = document.getElementById("questions");
@@ -16,20 +16,20 @@ var saveButton = document.getElementById("save");
 var initialsEl = document.getElementById("initials");
 var feedbackEl = document.getElementById("feedback");
 
-//Start of Quiz
+// Start of Quiz
 function startQuiz() {
 
-//this hides the start screen
+// this hides the start screen
     var startScreenEl = document.getElementById("start-screen");
     startScreenEl.setAttribute("class", "hide");
 
-//This Reveals and starts the questions 
+// This Reveals and starts the questions 
     questionsEl.removeAttribute("class");
 
-//Timer start
+// Timer start
     timerId = setInterval(clockTick, 1000);
 
-//display starting time
+// display starting time
     timerEl.textContent = time;
 
     getQuestions();
@@ -37,17 +37,17 @@ function startQuiz() {
 
 function getQuestions() {
 
-//Grabbing the current question from the list
+// Grabbing the current question from the list
     var currentQuestion = questions[currentQuestionIndex];
 
 //Refreshing to appropriate question title
     var titleEl = document.getElementById("question-title");
     titleEl.textContent = currentQuestion.title;
 
-//Clearing last answers
+// Clearing last answers
     choicesEl.innerHTML ="";
 
-//Choices in loop
+// Choices in loop
 currentQuestion.choices.foreach(function(choice, i) {
 
     var choiceNode = document.createElement("button");
@@ -56,7 +56,7 @@ currentQuestion.choices.foreach(function(choice, i) {
 
 choiceNode.textContent = i + 1 + ". " + choice;
 
-//Add event listener click per Choice
+// Add event listener click per Choice
 choiceNode.onclick = questionClick;
 
 //Show on page
@@ -65,12 +65,13 @@ choicesEl.appendChild(choiceNode);
 
 }
 
-//These are the responses to answers
+// These are the responses to answers
 function questionClick() {
 
-//If user put wrong answer,
+// If user put wrong answer,
     if (this.value !== questions[currentQuestions].answer) {
-//Time reduction
+
+// Time reduction
 time -=15;
 
     if (time < 0) {
@@ -83,7 +84,7 @@ timerEl.textContent = time;
 feedbackEl.textContent = "INCORRECT :(";
 
     } else {
-    feedbackEl.textConteent = "YES! :)"
+    feedbackEl.textContent = "YES! :)"
     }
 
 //Display feedback
