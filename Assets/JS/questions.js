@@ -1,6 +1,6 @@
 //These are the questions, answers to choose from, and correct answers
 
-var question = [
+var questions = [
 {
     title: "What does PERSISTENCE refer to in JavaScript terms?",
     choices: ["A file path that cannot fail", "The act of performing a PERSE","A user value that stays saved throughout a webpage", "When a coder codes for over 24 hours straight" ],
@@ -60,4 +60,4 @@ var question = [
     choices: ["HTML","CSS","Pascal", "all of the above"],
     answer: "CSS"
 }
-];
+]

@@ -18,6 +18,13 @@ body {
     min-height: 100vh;
 }
 
+.wrapper {
+    margin-right: auto;
+    margin-left:  auto; 
+    max-width: 960px;
+    padding: 7px;
+}
+
 h1 {
         font-size: 40pt;
         font-weight: bold;
@@ -48,6 +55,7 @@ button {
     color: yellow;
     background-color: magenta;
     align-items: center;
+    cursor: pointer;
     
 }
 
@@ -60,10 +68,14 @@ p {
 
 .wrapper {
     margin: auto;
+    width: 100%;
+    height: 30x;
+    text-align: center;
 }
 
 .hide {
     display: none;
+    opacity: 1;
 
 }
 
@@ -72,6 +84,7 @@ p {
     color:magenta;
     background-color: yellow;
     text-align: right;
+    padding: 5px;
 
 }
 
@@ -101,8 +114,10 @@ p {
 input {
     border: 2px;
     border-color: magenta;
+    color: magenta;
 
 }
+
 .game-over {
     font-size: 16pt;
     text-align: right;

@@ -1,3 +1,5 @@
+
+
 // Quiz Variables
 
 var currentQuestionIndex = 0;
@@ -10,8 +12,8 @@ var timerEL = document.getElementById("time");
 var questionsEl = document.getElementById("questions");
 var choicesEl = document.getElementById("choices");
 
-var startButton = document.getElementById("start");
-var saveButton = document.getElementById("save");
+var startBtn = document.getElementById("start");
+var saveBtn = document.getElementById("save");
 
 var initialsEl = document.getElementById("initials");
 var feedbackEl = document.getElementById("feedback");
@@ -32,10 +34,10 @@ function startQuiz() {
 // display starting time
     timerEl.textContent = time;
 
-    getQuestions();
+    getQuestion();
 }
 
-function getQuestions() {
+function getQuestion() {
 
 // Grabbing the current question from the list
     var currentQuestion = questions[currentQuestionIndex];
@@ -45,13 +47,13 @@ function getQuestions() {
     titleEl.textContent = currentQuestion.title;
 
 // Clearing last answers
-    choicesEl.innerHTML ="";
+    choicesEl.innerHTML = "";
 
 // Choices in loop
-currentQuestion.choices.foreach(function(choice, i) {
+currentQuestion.choices.forEach(function(choice, i) {
 
     var choiceNode = document.createElement("button");
-    choiceNode.setAttribute("class", choice);
+    choiceNode.setAttribute("class", "choice");
     choiceNode.setAttribute("value", choice);
 
 choiceNode.textContent = i + 1 + ". " + choice;
@@ -161,10 +163,10 @@ function saveHighscore() {
 //user clicks section
 
 //click button for intiial to be saved
-    saveButton.onclick = saveHighscore;
+    saveBtn.onclick = saveHighscore;
 
 //click button to start quiz
-    startButton.onclick = startQuiz;
+    startBtn.onclick = startQuiz;
 
 //click button for initials to be entered
     initialsEl.onkeyup = checkForEnter;
