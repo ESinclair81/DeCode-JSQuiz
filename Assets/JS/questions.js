@@ -32,7 +32,7 @@ var questions = [
 },
 
 {
-    title: "which of the below is an example of a variable declaration?",
+    title: "Which of the below is an example of a variable declaration?",
     choices: [" var.thingy"," 8 > 0i", " x is y", "var x = y" ],
     answer: "var x = y"
 },

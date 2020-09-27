@@ -74,9 +74,13 @@ p {
 }
 
 .hide {
-    display: none;
     opacity: 1;
 
+}
+
+span {
+    color: white;
+    
 }
 
 .scores {
@@ -124,8 +128,26 @@ input {
     color: magenta;
 }
 
+ol {
+    color: yellow;
+    text-align: center;
+    font-size: 34pt;
+
+}
+
+.final-score {
+    color: greenyellow;
+    font-size: 36pt;
+
+}
+
 footer {
     text-align: center;
     font-size: 16px;
     color: yellow;
+    background-color: magenta;
+    margin-top: 2px;
+    padding:1px;
+    position: fixed bottom;
+    
 }

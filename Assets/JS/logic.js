@@ -2,7 +2,7 @@
 
 // Quiz Variables
 
-var currentQuestionIndex = 0;
+var currentQuestionIndex= 0;
 var time = questions.length * 15;
 var timerId;
 
@@ -25,6 +25,7 @@ function startQuiz() {
     var startScreenEl = document.getElementById("start-screen");
     startScreenEl.setAttribute("class", "hide");
 
+
 // This Reveals and starts the questions 
     questionsEl.removeAttribute("class");
 
@@ -34,10 +35,10 @@ function startQuiz() {
 // display starting time
     timerEl.textContent = time;
 
-    getQuestion();
+    getQuestions();
 }
 
-function getQuestion() {
+function getQuestions() {
 
 // Grabbing the current question from the list
     var currentQuestion = questions[currentQuestionIndex];
@@ -59,7 +60,7 @@ currentQuestion.choices.forEach(function(choice, i) {
 choiceNode.textContent = i + 1 + ". " + choice;
 
 // Add event listener click per Choice
-choiceNode.onclick = questionClick;
+choiceNode.onclick = questionsClick;
 
 //Show on page
 choicesEl.appendChild(choiceNode);
@@ -68,7 +69,7 @@ choicesEl.appendChild(choiceNode);
 }
 
 // These are the responses to answers
-function questionClick() {
+function questionsClick() {
 
 // If user put wrong answer,
     if (this.value !== questions[currentQuestions].answer) {
@@ -124,7 +125,7 @@ function quizEnd() {
     function clockTick() {
         time--;
         timerEL.textContent = time;
-    if (time <=0) {
+    if (time <= 0) {
         quizEnd();
     }
 }
@@ -134,7 +135,7 @@ function quizEnd() {
 function saveHighscore() {
     var initials = initialsEl.value.trim();
 
-    if (initials !=="") {
+    if (initials !== "") {
 
 //Retrieve saved high scores
         var highscores = 
