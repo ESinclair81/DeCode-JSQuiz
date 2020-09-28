@@ -14,7 +14,7 @@
     
     <div class="timer">Time: <span id="time">0</span></div>
 
-    <div class="wrapper">
+    <div class="flexbox">
         <div id="start-screen" class="start">
 
             <h1>Can YOU DeCode This Quiz???</h1>
@@ -29,16 +29,16 @@
         </div>
 
 
-            <div id="questions" class="hide">
-                <h2 id= "question-title"></h2>
+            <div id="questions" class= "hide">
+                <h2 id= "questions-title"></h2>
                 <div id="choices" class="choices"></div>
             </div>
 
             <div id="game-over" class="hide"></div>
-            <h2> COMPLETE</h2>
+            <h2> COMPLETE</h2> 
             <p>Congratulations! <br>You Scored <span id="final-score"></span>!!!</p>
             <p>
-                Please Enter Your Initials Here: <input type="text" id="initials" max="3" />
+                Please Enter Your Initials Here: <input type="text" id="initials" maxlength="3" />
                 <button id="save">SAVE</button>
             </p>
             </div>

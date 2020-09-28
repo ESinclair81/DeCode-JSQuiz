@@ -60,7 +60,7 @@ var questions = [
         choices: ["HTML","CSS","Pascal", "all of the above"],
         answer: "CSS"
     }
-    ]
+    ];
 
 
 // Quiz Variables
@@ -71,8 +71,8 @@ var timerId;
 
 // Dom Element Variables 
 
-var timerEL = document.getElementById("time");
 var questionsEl = document.getElementById("questions");
+var timerEL = document.getElementById("time");
 var choicesEl = document.getElementById("choices");
 
 var startBtn = document.getElementById("start");
@@ -83,10 +83,6 @@ var feedbackEl = document.getElementById("feedback");
 
 // Start of Quiz
 function startQuiz() {
-
-// this hides the start screen
-    var startScreenEl = document.getElementById("start-screen");
-    startScreenEl.setAttribute("class", "hide");
 
 
 // This Reveals and starts the questions 
