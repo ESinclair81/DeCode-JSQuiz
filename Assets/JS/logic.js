@@ -71,8 +71,9 @@ var timerId;
 
 // Dom Element Variables 
 
+
+var timerEl = document.getElementById("time");
 var questionsEl = document.getElementById("questions");
-var timerEL = document.getElementById("time");
 var choicesEl = document.getElementById("choices");
 
 var startBtn = document.getElementById("start");
@@ -84,6 +85,9 @@ var feedbackEl = document.getElementById("feedback");
 // Start of Quiz
 function startQuiz() {
 
+// this hides the start screen
+   var startScreenEl = document.getElementById("start-screen");
+    startScreenEl.setAttribute("class", "hide");
 
 // This Reveals and starts the questions 
     questionsEl.removeAttribute("class");
@@ -94,10 +98,10 @@ function startQuiz() {
 // display starting time
     timerEl.textContent = time;
 
-    getQuestions();
+    getQuestion();
 }
 
-function getQuestions() {
+function getQuestion() {
 
 // Grabbing the current question from the list
     var currentQuestion = questions[currentQuestionIndex];
@@ -183,7 +187,7 @@ function quizEnd() {
 //This is the clockTick function for the timer
     function clockTick() {
         time--;
-        timerEL.textContent = time;
+        timerEl.textContent = time;
     if (time <= 0) {
         quizEnd();
     }

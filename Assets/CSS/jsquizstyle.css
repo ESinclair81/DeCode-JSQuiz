@@ -67,10 +67,16 @@ p {
 }
 
 .hide {
-  display: none;
+
+  visibility: none;
 
 }
 
+#choices {
+            border-color: yellow;
+            
+
+}
 span {
     color: white;
     
@@ -96,7 +102,6 @@ span {
 .start {
     text-align: center;
     margin: auto;
-
 
 }
 
@@ -125,6 +130,7 @@ span {
     color: black;
     text-align: center;
     background-color: magenta;
+
 }
 
 input {
