@@ -82,8 +82,10 @@ var saveBtn = document.getElementById("save");
 var initialsEl = document.getElementById("initials");
 var feedbackEl = document.getElementById("feedback");
 
+
 // Start of Quiz
 function startQuiz() {
+
 
 // this hides the start screen
    var startScreenEl = document.getElementById("start-screen");

@@ -67,14 +67,13 @@ p {
 }
 
 .hide {
-
-  visibility: none;
+    opacity: 1;
 
 }
 
 #choices {
             border-color: yellow;
-            
+
 
 }
 span {
